@@ -22,7 +22,13 @@
                             </label>
                             <input type="number" min="0" max="" id="input01" class="form-control h-75 w-auto"
                                 aria-describedby="passwordHelpBlock" name="input01">
+                            <div class="col-12">
+                                <input type="checkbox" name="inputc01" id="inputc01" value="0" class="col-1">Tutti
+                                <input type="checkbox" name="inputc02" id="inputc02" value="1" class="col-1"> Solo Numeri
+                                <input type="checkbox" name="inputc03" id="inputc03" value="2" class="col-1"> Solo numeri e simboli
+                            </div>
                         </div>
+
                     </div>
                     <div class="col-2">
                         <button class="btn btn-primary" formnovalidate type="submit">Invia</button>
@@ -30,11 +36,11 @@
                 </div>
             </form>
             <?php
-            require_once __DIR__ .'/functions.php';
+            require_once __DIR__ . '/functions.php';
 
-        ?>
+            ?>
         </div>
-        
+
     </main>
 </body>
 
