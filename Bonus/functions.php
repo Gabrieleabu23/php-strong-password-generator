@@ -1,4 +1,5 @@
 <?php 
+session_start();
     if (isset($_GET['input01']) && $_GET['input01'] != '') {
         $scelta = $_GET['input01'];
         function GeneraPassword($numMax){
@@ -8,6 +9,8 @@
             }
             return $password;
         };
-        echo '<span class="password_title">Password incredibile: </span>'.( GeneraPassword($scelta));
+       
+        $_SESSION["boh"] = GeneraPassword($scelta);
+        header('Location: ./password_message.php');
     }
 ?>
