@@ -12,7 +12,34 @@
 </head>
 
 <body>
+    <main>
+        <div class="container w-75">
+            <form action="">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <div class="row align-items-center">
+                            <label for="input01" class="form-label col-5">Lunghezza Password super mega incredibile:
+                            </label>
+                            <input type="number" min="0" max="" id="input01" class="form-control h-75 w-auto"
+                                aria-describedby="passwordHelpBlock" name="input01">
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-primary" formnovalidate type="submit">Invia</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <?php
+        if (isset($_GET['input01'])) {
+            $scelta = $_GET['input01'];
+            if ($scelta != '') {
 
+                echo "Opzione selezionata: " . $scelta;
+            }
+        }
+        ?>
+    </main>
 </body>
 
 </html>
